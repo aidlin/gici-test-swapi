@@ -1,0 +1,17 @@
+<nav class="grey darken-3">
+  <div class="nav-wrapper container">
+    <a href="/" class="brand-logo center">SW Favorites</a>
+    <a data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a [routerLink]="['/films']" [routerLinkActive]="['active']">Films</a></li>
+      <li><a [routerLink]="['/characters']" [routerLinkActive]="['active']">Caracters</a></li>
+      <li><a [routerLink]="['/favorites']" [routerLinkActive]="['active']">Favorites</a></li>
+    </ul>
+  </div>
+</nav>
+
+<ul class="sidenav grey darken-3" id="mobile-demo">
+  <li><a [routerLink]="['/films']" [routerLinkActive]="['active']">Films</a></li>
+  <li><a [routerLink]="['/characters']" [routerLinkActive]="['active']">Caracters</a></li>
+  <li><a [routerLink]="['/favorites']" [routerLinkActive]="['active']">Favorites</a></li>
+</ul>
