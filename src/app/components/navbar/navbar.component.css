@@ -1,5 +1,6 @@
 .brand-logo {
   color: yellow;
+  white-space: nowrap;
 }
 
 #mobile-demo a {
