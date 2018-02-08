@@ -13,7 +13,9 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     const elem = document.querySelector('.sidenav');
-    const instance = M.Sidenav.init(elem, {});
+    const instance = M.Sidenav.init(elem, {
+      draggable: true
+    });
   }
 
 }
