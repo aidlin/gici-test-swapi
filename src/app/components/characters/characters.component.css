@@ -1,0 +1,16 @@
+.material-icons {
+  cursor: pointer;
+  vertical-align: 1px;
+}
+
+.pagination li.active {
+  background-color: yellow;
+}
+
+.pagination li a {
+  color: grey;
+}
+
+.pagination li.active a {
+  color: black;
+}

@@ -1,3 +1,43 @@
-<p>
-  characters works!
-</p>
+<div *ngIf="!this.fetching" class="section">
+  <div *ngFor="let character of characters">
+    <div class="row valign-wrapper">
+      <div class="col s10 m11 title">
+        <h3>{{character.name}}</h3>
+        <p class="row">
+          <strong class="col s2 grey-text">Height:</strong>
+          <span class="col s10">{{character.height}}</span>
+        </p>
+        <p class="row">
+          <strong class="col s2 grey-text">Gender:</strong>
+          <span class="col s10">{{character.gender}}</span>
+        </p>
+        <p class="row">
+          <strong class="col s2 grey-text">Eyes:</strong>
+          <span class="col s10">{{character.eye_color}}</span>
+        </p>
+        <p class="row">
+          <strong class="col s2 grey-text">Hair:</strong>
+          <span class="col s10">{{character.hair_color}}</span>
+        </p>
+      </div>
+      <div class="col s2 m1">
+        <i class="large material-icons yellow-text" (click)="toggleFavorite(character.name)">{{character.icon}}</i>
+      </div>
+    </div>
+    <div class="divider"></div>
+  </div>
+  <ul class="pagination center" *ngIf="this.totalPages.length > 1">
+    <li [class]="disabledPage(0)">
+      <a (click)="showPage(this.currentPage-1)"><i class="material-icons">chevron_left</i></a>
+    </li>
+    <li *ngFor="let page of this.totalPages; let i = index" [class]="activePage(i+1)">
+      <a (click)="showPage(i+1)">{{i+1}}</a>
+    </li>
+    <li [class]="disabledPage(this.totalPages.length-1)">
+      <a (click)="showPage(this.currentPage+1)"><i class="material-icons">chevron_right</i></a>
+    </li>
+  </ul>
+</div>
+<div *ngIf="this.fetching" class="section progress">
+  <div class="indeterminate"></div>
+</div>

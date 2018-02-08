@@ -1,3 +1,19 @@
 .brand-logo {
   color: yellow;
 }
+
+#mobile-demo a {
+  color: white;
+}
+
+#mobile-demo li a i.movie-icon {
+  color: mediumpurple;
+}
+
+#mobile-demo li a i.character-icon {
+  color: deepskyblue;
+}
+
+li.active {
+  background-color: dimgrey;
+}
