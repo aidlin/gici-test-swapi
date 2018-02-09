@@ -1,26 +1,26 @@
 <div *ngIf="!this.fetching" class="section">
   <div *ngFor="let character of characters">
     <div class="row valign-wrapper">
-      <div class="col s10 m11 title">
+      <div class="col s9 m11 title">
         <h3>{{character.name}}</h3>
         <p class="row">
-          <strong class="col s2 grey-text">Height:</strong>
-          <span class="col s10">{{character.height}}</span>
+          <strong class="col s3 grey-text">Height:</strong>
+          <span class="col s9">{{character.height}}</span>
         </p>
         <p class="row">
-          <strong class="col s2 grey-text">Gender:</strong>
-          <span class="col s10">{{character.gender}}</span>
+          <strong class="col s3 grey-text">Gender:</strong>
+          <span class="col s9">{{character.gender}}</span>
         </p>
         <p class="row">
-          <strong class="col s2 grey-text">Eyes:</strong>
-          <span class="col s10">{{character.eye_color}}</span>
+          <strong class="col s3 grey-text">Eyes:</strong>
+          <span class="col s9">{{character.eye_color}}</span>
         </p>
         <p class="row">
-          <strong class="col s2 grey-text">Hair:</strong>
-          <span class="col s10">{{character.hair_color}}</span>
+          <strong class="col s3 grey-text">Hair:</strong>
+          <span class="col s9">{{character.hair_color}}</span>
         </p>
       </div>
-      <div class="col s2 m1">
+      <div class="col s3 m1">
         <i class="large material-icons yellow-text" (click)="toggleFavorite(character.name)">{{character.icon}}</i>
       </div>
     </div>
